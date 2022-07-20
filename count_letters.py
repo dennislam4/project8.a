@@ -10,8 +10,9 @@ def count_letters(words):
 
     for letter in words:
         letter = letter.upper()
-        if letter not in letter_count:
-            letter_count[letter] = 1
-        else:
+        if letter in letter_count:
             letter_count[letter] += 1
+        else:
+            letter_count[letter] = 1
     return letter_count
+
